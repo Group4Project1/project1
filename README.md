@@ -29,7 +29,7 @@ SO THAT I can quickly find the best movie or show to watch
 
 This is the draft wireframe for our project app.
 
-![Group 4 Project 1 Wireframe](./Assets/Images/Group&nbsp;4&nbsp;-&nbsp;Project&nbsp;1&nbsp;App&nbsp;Wireframe.png)
+![Group 4 Project 1 Wireframe](./Assets/Images/App_Wireframe.png)
 
 ## APIs to be Used
 
@@ -47,4 +47,4 @@ All API links provided below were listed on the RapidAPI.com website provided to
 
 Here is our tentative project timeline.
 
-![Tentative Timeline](./Assets/Images/Tentative&nbsp;Timeline.png)
+![Tentative Timeline](./Assets/Images/Tentative_Timeline.png)
