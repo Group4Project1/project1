@@ -37,7 +37,7 @@ All API links provided below were listed on the RapidAPI.com website provided to
 
 ### APIs for Streaming Apps
 
-- Netflix API - [https://rapidapi.com/rasiqueira/api/netflix-unofficial/details](https://rapidapi.com/rasiqueira/api/netflix-unofficial/details)https://
+- Netflix API - [https://rapidapi.com/rasiqueira/api/netflix-unofficial/details](https://rapidapi.com/rasiqueira/api/netflix-unofficial/details)
 - Hulu API - [https://rapidapi.com/Streamzui/api/hulu1/details](https://rapidapi.com/Streamzui/api/hulu1/details)
 - Amazon Prime Video API - [https://rapidapi.com/Streamzui/api/streamzui-amazon-prime-video-search](https://rapidapi.com/Streamzui/api/streamzui-amazon-prime-video-search)
 - Rotten Tomatoes API - [https://rapidapi.com/blog/directory/rotten-tomatoes/](https://rapidapi.com/blog/directory/rotten-tomatoes/)
