@@ -12,7 +12,10 @@
 			rel="stylesheet"
 		/>
 		<!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
 		<!-- Custom CSS -->
 		<link href="./Assets/css/style.css" rel="stylesheet" type="text/css" />
 
@@ -21,67 +24,72 @@
 
 	<body>
 		<!-- Nav starts here -->
-    <nav>
-      <div class="nav-wrapper indigo darken-4">
-        <a href="#" class="brand-logo center">Better Streaming</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#">Sass</a></li>
-          <li><a href="#">Components</a></li>
-          <li><a href="#">JavaScript</a></li>
-        </ul>
-      </div>
-    <!-- Nav ends here -->
-    
-    <!-- Main container starts -->
-   <div class = "container">
-     <!-- Intro image row -->
-     <div class="row">
-      <img src="./Assets/Images/movie.jpg" alt="movie theater screen" class ="responsive-image" id="homePagePhoto"/>
-     </div>
-     <!-- Streaming app selection row -->
-     <div class="row">
-      <div class ="col-3"></div>
-      <div class ="col-6">
-        <div class ="row">
-           <!-- App selection #1 -->
-          <div class ="col-4">
-            <div class="card horizontal">
-            <div class="card-image">
-            <img src="https://lorempixel.com/100/190/nature/6">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
-          </div>
-            </div>
-          </div>
-           <!-- App selection #2 -->
-          <div class ="col-4">
-            <div class="card horizontal">
-            <div class="card-image">
-            <img src="https://lorempixel.com/100/190/nature/6">
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-              </div>
-          </div>
-            </div>
-          </div>
-      </div>
-      <div class ="col-3"></div>
-   </div>
-    <!-- Main container ends -->
+		<nav class="fixed-nav">
+			<div class="nav-wrapper indigo darken-4">
+				<a href="#" class="brand-logo center">Better Streaming</a>
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger"
+					><i class="material-icons">menu</i></a
+				>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="#">Link 1</a></li>
+					<li><a href="#">Link 2</a></li>
+					<li><a href="#">Link 3</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Nav ends here -->
 
-    
+		<!-- Main container starts -->
+		<div class="container">
+			<!-- Intro image row -->
+			<div class="row">
+				<div class="col s12">
+					<img
+						src="./Assets/Images/movie.jpg"
+						alt="movie theater screen"
+						class="responsive-image"
+						id="homePagePhoto"
+					/>
+				</div>
+			</div>
+
+			<!-- Streaming app selection starts -->
+			<div class="row">
+				<!-- App selection #1 -->
+				<div class="col s4">
+					<div class="card">
+						<div class="card-image">
+							<img src="./Assets/Images/netflix.png" />
+						</div>
+						<div class="card-action">
+							<label>
+								<input type="checkbox" class="filled-in" checked="checked" />
+								<span>Select App</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<!-- App selection #2 -->
+				<div class="col s4">
+					<div class="card">
+						<div class="card-image">
+							<img src="./Assets/Images/amazonPrimeVideo.png" />
+						</div>
+						<div class="card-action">
+							<label>
+								<input type="checkbox" class="filled-in" checked="checked" />
+								<span>Select App</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				</div>
+				<!-- App selection #3 -->
+				<div class="col s4"></div>
+			</div>
+			<!-- Streaming app selection ends -->
+		</div>
+		<!-- Main container ends -->
 
 		<!-- Javascript link from Materialize CSS Framework -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
