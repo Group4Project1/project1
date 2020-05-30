@@ -24,36 +24,41 @@
 
 	<body>
 		<!-- Nav starts here -->
-		<nav class="fixed-nav">
-			<div class="nav-wrapper indigo darken-4">
-				<a href="#" class="brand-logo center">Better Streaming</a>
+		<nav class="fixed-nav transparent">
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">Better Streaming</a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger"
 					><i class="material-icons">menu</i></a
 				>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="#">Link 1</a></li>
-					<li><a href="#">Link 2</a></li>
-					<li><a href="#">Link 3</a></li>
+				<ul class="right hide-on-med-and-down">
+					<li><a class="btn">HomePage</a></li>
+					<li><a class="btn">Selections</a></li>
+					<li><a class="btn">Movies</a></li>
+				</ul>
+				<ul class="sidenav white" id="mobile-demo">
+					<li><a href="#">HomePage</a></li>
+					<li><a href="#">Selections</a></li>
+					<li><a href="#">Movies</a></li>
 				</ul>
 			</div>
 		</nav>
 		<!-- Nav ends here -->
 
+		<banner>
+			<img
+				src="./Assets/Images/banner.jpg"
+				alt="movie theater screen"
+				class="responsive-image banner-padding"
+				id="homePagePhoto"
+			/>
+		</banner>
 		<!-- Main container starts -->
 		<div class="container">
-			<!-- Intro image row -->
-			<div class="row">
-				<div class="col s12">
-					<img
-						src="./Assets/Images/movie.jpg"
-						alt="movie theater screen"
-						class="responsive-image"
-						id="homePagePhoto"
-					/>
-				</div>
+			<!-- Step #1 - Slect Apps -->
+			<div class="row card-panel teal lighten-2">
+				<h5>Which streaming apps do you use?</h5>
 			</div>
-
-			<!-- Streaming app selection starts -->
+			<!-- App Options -->
 			<div class="row">
 				<!-- App selection #1 -->
 				<div class="col s4">
@@ -64,7 +69,7 @@
 						<div class="card-action">
 							<label>
 								<input type="checkbox" class="filled-in" checked="checked" />
-								<span>Select App</span>
+								<span>App</span>
 							</label>
 						</div>
 					</div>
@@ -78,7 +83,7 @@
 						<div class="card-action">
 							<label>
 								<input type="checkbox" class="filled-in" checked="checked" />
-								<span>Select App</span>
+								<span>App</span>
 							</label>
 						</div>
 					</div>
@@ -92,7 +97,7 @@
 						<div class="card-action">
 							<label>
 								<input type="checkbox" class="filled-in" checked="checked" />
-								<span>Select App</span>
+								<span>App</span>
 							</label>
 						</div>
 					</div>
@@ -102,9 +107,15 @@
 		</div>
 		<!-- Main container ends -->
 
+		<!-- Jquery link -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.js"
+			integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+			crossorigin="anonymous"
+		></script>
 		<!-- Javascript link from Materialize CSS Framework -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-		<!-- Custom JavaSctipt -->
+		<!-- Custom JavaScript -->
 		<script src="./Assets/script/script.js" type="text/javascript"></script>
 	</body>
 </html>
