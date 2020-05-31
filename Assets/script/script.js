@@ -40,18 +40,31 @@ var criteriaQuestions = [
 	},
 ];
 
-// This is to activate the side nav.
+// This is a global variable to help keep track of the current question.
+var currentQuestion = 0;
+
+// This is to initialize any Materialize components.
 $(document).ready(function () {
 	$(".sidenav").sidenav();
-	$(".collapsible").collapsible();
 });
 
-// This function will only show the first question upon page refresh.
+// Invoking the startSelection() function to have only the first question show upon page load.
+startSelection();
+
+// This function will only show the first question upon page load.
 function startSelection() {
 	for (var i = 0; i < criteriaQuestions.length; i++) {
-		$("criteria" + i).collapsible();
+		$("#criteria" + i).toggleClass("hideContent");
+		// Involing the nextQuestion function when "next" button is clicked.
+		$("#buttonNext" + i).click(nextQuestion);
 	}
+	$("#criteria0").toggleClass("hideContent");
 }
 
 // This is to start toggling through the criteria questions.
-function nextQuestion() {}
+function nextQuestion() {
+	// These JQuery selectors use currentQuestion variable to toggle between questions.
+	$("#criteria" + currentQuestion).toggleClass("hideContent");
+	$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
+	currentQuestion += 1;
+}
