@@ -77,6 +77,9 @@ function nextQuestion() {
 	// If-statement that will only allow users to proceed if they make at least one criteria selection per question.
 	if (selectedChoices.length === 0) {
 		// console.log("no checkboxes checked");
+		var elem = document.getElementById("modal1");
+		var instance = M.Modal.init(elem);
+		instance.open();
 	} else {
 		// These JQuery selectors use currentQuestion variable to toggle between questions.
 		// console.log("at least one checkbox checked");
