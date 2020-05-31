@@ -43,19 +43,15 @@ var criteriaQuestions = [
 // This is to activate the side nav.
 $(document).ready(function () {
 	$(".sidenav").sidenav();
+	$(".collapsible").collapsible();
 });
+
+// This function will only show the first question upon page refresh.
+function startSelection() {
+	for (var i = 0; i < criteriaQuestions.length; i++) {
+		$("criteria" + i).collapsible();
+	}
+}
 
 // This is to start toggling through the criteria questions.
 function nextQuestion() {}
-
-// if (i === 3) {
-// 	clearInterval(timerInterval);
-// 	quizcontentDiv.classList.toggle("collapse");
-// 	quizscoreDiv.classList.toggle("collapse");
-// 	activeDiv = quizscoreDiv;
-// 	finalScore.innerHTML = secondsLeft;
-// 	timerNav.innerHTML = secondsLeft;
-// } else {
-// 	i = i + 1;
-// 	loadQuestion(i);
-// }
