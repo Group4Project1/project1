@@ -55,7 +55,7 @@ startSelection();
 function startSelection() {
 	for (var i = 0; i < criteriaQuestions.length; i++) {
 		$("#criteria" + i).toggleClass("hideContent");
-		// Involing the nextQuestion function when "next" button is clicked.
+		// Invoking the nextQuestion function when "next" button is clicked.
 		$("#buttonNext" + i).click(nextQuestion);
 	}
 	$("#criteria0").toggleClass("hideContent");
@@ -63,8 +63,25 @@ function startSelection() {
 
 // This is to start toggling through the criteria questions.
 function nextQuestion() {
-	// These JQuery selectors use currentQuestion variable to toggle between questions.
-	$("#criteria" + currentQuestion).toggleClass("hideContent");
-	$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
-	currentQuestion += 1;
+	// Empty array variable to store user's criteria selections.
+	var selectedChoices = [];
+	// Using this portion to push any user selections to the selectedChoices array.
+	$("#criteria" + currentQuestion + " input").each(function () {
+		// console.log("checking checkbox");
+		var isChecked = $(this).is(":checked");
+		if (isChecked) {
+			selectedChoices.push($(this).val());
+			// console.log("appending value to selected choices");
+		}
+	});
+	// If-statement that will only allow users to proceed if they make at least one criteria selection per question.
+	if (selectedChoices.length === 0) {
+		// console.log("no checkboxes checked");
+	} else {
+		// These JQuery selectors use currentQuestion variable to toggle between questions.
+		// console.log("at least one checkbox checked");
+		$("#criteria" + currentQuestion).toggleClass("hideContent");
+		$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
+		currentQuestion += 1;
+	}
 }
