@@ -56,7 +56,7 @@
 		<!-- Main container starts -->
 		<div class="container">
 			<!-- Criteria 1 - Apps -->
-			<div id="criteria1">
+			<div id="criteria0">
 				<!-- Question 1 -->
 				<div class="row">
 					<div class="collection">
@@ -75,7 +75,7 @@
 							</div>
 							<div class="card-action">
 								<label>
-									<input type="checkbox" class="filled-in" checked="checked" />
+									<input type="checkbox" class="filled-in" />
 									<span>App</span>
 								</label>
 							</div>
@@ -89,7 +89,7 @@
 							</div>
 							<div class="card-action">
 								<label>
-									<input type="checkbox" class="filled-in" checked="checked" />
+									<input type="checkbox" class="filled-in" />
 									<span>App</span>
 								</label>
 							</div>
@@ -103,7 +103,7 @@
 							</div>
 							<div class="card-action">
 								<label>
-									<input type="checkbox" class="filled-in" checked="checked" />
+									<input type="checkbox" class="filled-in" />
 									<span>App</span>
 								</label>
 							</div>
@@ -112,12 +112,12 @@
 				</div>
 				<!-- Next question button -->
 				<div class="row center-align">
-					<a class="waves-effect waves-light btn">Next</a>
+					<a class="waves-effect waves-light btn" id="buttonNext0">Next</a>
 				</div>
 			</div>
 
 			<!-- Criteria 2 - Type -->
-			<div id="criteria2">
+			<div id="criteria1">
 				<!-- Question 2 -->
 				<div class="row">
 					<div class="collection">
@@ -137,7 +137,7 @@
 							</div>
 							<div class="card-action">
 								<label>
-									<input type="checkbox" class="filled-in" checked="checked" />
+									<input type="checkbox" class="filled-in" />
 									<span class="white-text">Select</span>
 								</label>
 							</div>
@@ -152,7 +152,7 @@
 							</div>
 							<div class="card-action">
 								<label>
-									<input type="checkbox" class="filled-in" checked="checked" />
+									<input type="checkbox" class="filled-in" />
 									<span class="white-text">Select</span>
 								</label>
 							</div>
@@ -161,13 +161,12 @@
 				</div>
 				<!-- Next page buttons -->
 				<div class="row center-align">
-					<a class="waves-effect waves-light btn">Previous</a>
-					<a class="waves-effect waves-light btn">Next</a>
+					<a class="waves-effect waves-light btn" id="buttonNext1">Next</a>
 				</div>
 			</div>
 
 			<!-- Criteria 3 - Genre-->
-			<div id="criteria3">
+			<div id="criteria2">
 				<!-- Question 3 -->
 				<div class="row">
 					<div class="collection">
@@ -181,89 +180,58 @@
 					<div>
 						<ul class="collection">
 							<li class="collection-item">
-								Action / Adventure
+								Action
 								<label>
-									<input
-										type="checkbox"
-										class="filled-in right"
-										checked="checked"
-									/>
+									<input type="checkbox" class="filled-in right" />
 									<span class="white-text">Select</span>
 								</label>
 							</li>
 							<li class="collection-item">
 								Drama
 								<label>
-									<input
-										type="checkbox"
-										class="filled-in right"
-										checked="checked"
-									/>
+									<input type="checkbox" class="filled-in right" />
 									<span class="white-text">Select</span>
 								</label>
 							</li>
 							<li class="collection-item">
 								Romance
 								<label>
-									<input
-										type="checkbox"
-										class="filled-in right"
-										checked="checked"
-									/>
+									<input type="checkbox" class="filled-in right" />
 									<span class="white-text">Select</span>
 								</label>
 							</li>
 							<li class="collection-item">
 								SciFi
 								<label>
-									<input
-										type="checkbox"
-										class="filled-in right"
-										checked="checked"
-									/>
+									<input type="checkbox" class="filled-in right" />
 									<span class="white-text">Select</span>
 								</label>
 							</li>
 							<li class="collection-item">
-								Crime / Mystery
+								Thriller
 								<label>
-									<input
-										type="checkbox"
-										class="filled-in right"
-										checked="checked"
-									/>
+									<input type="checkbox" class="filled-in right" />
 									<span class="white-text">Select</span>
 								</label>
 							</li>
 							<li class="collection-item">
-								Fantasy
+								Children
 								<label>
-									<input
-										type="checkbox"
-										class="filled-in right"
-										checked="checked"
-									/>
-									<span class="white-text"
-										>Select
-										<label>
-											<input
-												type="checkbox"
-												class="filled-in right"
-												checked="checked"
-											/>
-											<span class="white-text">Select</span>
-										</label>
-									</span>
+									<input type="checkbox" class="filled-in right" />
+									<span class="white-text">Select </span>
 								</label>
 							</li>
 							<li class="collection-item">
-								Other / Misc
+								Comedy
 								<label>
-									<input
-										type="checkbox"
-										class="filled-in right"
-										checked="checked"
-									/>
+									<input type="checkbox" class="filled-in right" />
+									<span class="white-text">Select</span>
+								</label>
+							</li>
+							<li class="collection-item">
+								Other
+								<label>
+									<input type="checkbox" class="filled-in right" />
 									<span class="white-text">Select</span>
 								</label>
 							</li>
@@ -272,13 +240,12 @@
 				</div>
 				<!-- Next page buttons -->
 				<div class="row center-align">
-					<a class="waves-effect waves-light btn">Previous</a>
-					<a class="waves-effect waves-light btn">Next</a>
+					<a class="waves-effect waves-light btn" id="buttonNext2">Next</a>
 				</div>
 			</div>
 
 			<!-- Criteria 4 - Rating-->
-			<div id="criteria4">
+			<div id="criteria3">
 				<!-- Question 4 -->
 				<div class="row">
 					<div class="collection">
@@ -293,55 +260,35 @@
 						<li class="collection-item">
 							G (Family Friendly)
 							<label>
-								<input
-									type="checkbox"
-									class="filled-in right"
-									checked="checked"
-								/>
+								<input type="checkbox" class="filled-in right" />
 								<span class="white-text">Select</span>
 							</label>
 						</li>
 						<li class="collection-item">
 							PG (Parental Guidance)
 							<label>
-								<input
-									type="checkbox"
-									class="filled-in right"
-									checked="checked"
-								/>
+								<input type="checkbox" class="filled-in right" />
 								<span class="white-text">Select</span>
 							</label>
 						</li>
 						<li class="collection-item">
 							PG-13 (Inapproriate for children under 13)
 							<label>
-								<input
-									type="checkbox"
-									class="filled-in right"
-									checked="checked"
-								/>
+								<input type="checkbox" class="filled-in right" />
 								<span class="white-text">Select</span>
 							</label>
 						</li>
 						<li class="collection-item">
 							R (Adult supervision for under 17)
 							<label>
-								<input
-									type="checkbox"
-									class="filled-in right"
-									checked="checked"
-								/>
+								<input type="checkbox" class="filled-in right" />
 								<span class="white-text">Select</span>
 							</label>
 						</li>
 						<li class="collection-item">
 							NC-17 (No one 17 or under)
 							<label>
-								<input
-									type="checkbox"
-									class="filled-in right"
-									checked="checked"
-								/>
+								<input type="checkbox" class="filled-in right" />
 								<span class="white-text">Select</span>
 							</label>
 						</li>
@@ -349,7 +296,24 @@
 				</div>
 				<!-- Next page buttons -->
 				<div class="row center-align">
-					<a class="waves-effect waves-light btn">It's Streaming Time!!</a>
+					<a class="waves-effect waves-light btn" id="buttonNext3"
+						>Recommendations</a
+					>
+				</div>
+			</div>
+
+			<!-- Modal pop-up when questions not answered -->
+			<div id="modal1" class="modal">
+				<div class="modal-content">
+					<h4>Error Notice</h4>
+					<p class="flow-text">
+						Please make a selection before proceeding to the next question.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#!" class="modal-close waves-effect waves-green btn"
+						>Close</a
+					>
 				</div>
 			</div>
 		</div>

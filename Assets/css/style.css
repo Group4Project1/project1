@@ -10,3 +10,7 @@
 .bold {
 	font-weight: bold;
 }
+
+.hideContent {
+	display: none;
+}
