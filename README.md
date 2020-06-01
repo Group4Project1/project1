@@ -14,7 +14,13 @@ The goal of this project would be to develop a responsive application the would 
 - Genre
 - Movie vs show series
 - Assigned movie rating (G, PG, PG-13, R)
-- Random streaming recommendation (allows app to make random movie recommendation for use)
+- NICE TO HAVE: Random streaming recommendation (allows app to make random movie recommendation for use)
+
+## Group 4 Members
+
+- [Juliet Goldstein](https://github.com/julietg19)
+- [Krystal Duran](https://github.com/KEDuran)
+- [Vandolph Baptiste](https://github.com/vandolph44)
 
 ## User Story
 
@@ -25,7 +31,15 @@ SO THAT I can quickly find the best movie or show to watch
 
 ```
 
-## Application Wireframe
+## Application
+
+### Screenshot of Draft Homepage
+
+This is the screenshot of our initial version of the homepage.
+
+![Group 4 Project 1 Homepage](./Assets/Images/homepage.png)
+
+### Wireframe
 
 This is the draft wireframe for our project app.
 
