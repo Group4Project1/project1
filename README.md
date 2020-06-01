@@ -28,11 +28,13 @@ SO THAT I can quickly find the best movie or show to watch
 ## Application
 
 ### Screenshot of Draft Homepage
+
 This is the screenshot of our initial version of the homepage.
 
-
+![Group 4 Project 1 Homepage](./Assets/Images/homepage.png)
 
 ### Wireframe
+
 This is the draft wireframe for our project app.
 
 ![Group 4 Project 1 Wireframe](./Assets/Images/App_Wireframe.png)
@@ -48,6 +50,12 @@ All API links provided below were listed on the RapidAPI.com website provided to
 - Amazon Prime Video API - [https://rapidapi.com/Streamzui/api/streamzui-amazon-prime-video-search](https://rapidapi.com/Streamzui/api/streamzui-amazon-prime-video-search)
 - Rotten Tomatoes API - [https://rapidapi.com/blog/directory/rotten-tomatoes/](https://rapidapi.com/blog/directory/rotten-tomatoes/)
 - IMDB API - [https://rapidapi.com/hmerritt/api/imdb-internet-movie-database-unofficial](https://rapidapi.com/hmerritt/api/imdb-internet-movie-database-unofficial)
+
+## Group 4 Members
+
+- [Juliet Goldstein](https://github.com/julietg19)
+- [Krystal Duran](https://github.com/KEDuran)
+- [Vandolph Baptiste](https://github.com/vandolph44)
 
 ## Rough Breakdown of Tasks
 
