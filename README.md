@@ -16,6 +16,12 @@ The goal of this project would be to develop a responsive application the would 
 - Assigned movie rating (G, PG, PG-13, R)
 - NICE TO HAVE: Random streaming recommendation (allows app to make random movie recommendation for use)
 
+## Group 4 Members
+
+- [Juliet Goldstein](https://github.com/julietg19)
+- [Krystal Duran](https://github.com/KEDuran)
+- [Vandolph Baptiste](https://github.com/vandolph44)
+
 ## User Story
 
 ```
@@ -50,12 +56,6 @@ All API links provided below were listed on the RapidAPI.com website provided to
 - Amazon Prime Video API - [https://rapidapi.com/Streamzui/api/streamzui-amazon-prime-video-search](https://rapidapi.com/Streamzui/api/streamzui-amazon-prime-video-search)
 - Rotten Tomatoes API - [https://rapidapi.com/blog/directory/rotten-tomatoes/](https://rapidapi.com/blog/directory/rotten-tomatoes/)
 - IMDB API - [https://rapidapi.com/hmerritt/api/imdb-internet-movie-database-unofficial](https://rapidapi.com/hmerritt/api/imdb-internet-movie-database-unofficial)
-
-## Group 4 Members
-
-- [Juliet Goldstein](https://github.com/julietg19)
-- [Krystal Duran](https://github.com/KEDuran)
-- [Vandolph Baptiste](https://github.com/vandolph44)
 
 ## Rough Breakdown of Tasks
 
