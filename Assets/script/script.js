@@ -40,7 +40,6 @@ var criteriaQuestions = [
   },
 ];
 
-
 // Global array variable to store user selection
 
 var selectionCriteria = [];
@@ -76,9 +75,9 @@ function nextQuestion() {
     var isChecked = $(this).is(":checked");
     if (isChecked) {
       selectedChoices.push($(this).val());
-      // console.log("appending value to selected choices");
 
-	  
+      console.log("selected choices" + selectedChoices);
+
       localStorage.setItem(
         "selectionCriteria",
         JSON.stringify(selectedChoices)
@@ -119,6 +118,10 @@ function nextQuestion() {
 
 //  QUESTIONS FOR TUTOR:
 
-// WHERE SHOULD WE PUT THE LOCAL STORAGE CODE 
+// WHERE SHOULD WE PUT THE LOCAL STORAGE CODE
 
-//
+//WHY IS IT NOT WORKING
+
+// next button only to get to next page
+
+// buttons that change color instead of check boxes and are connected to local storage
