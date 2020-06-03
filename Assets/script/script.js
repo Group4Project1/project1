@@ -109,33 +109,49 @@ function nextQuestion() {
 		$("#criteria" + currentQuestion).toggleClass("hideContent");
 		$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
 		currentQuestion += 1;
+		if (currentQuestion === 4) {
+			makeAjaxcall();
+		}
 	}
-	// makeAjaxcall();
 }
 
 function makeAjaxcall() {
-	// API key / code for the IMBD website (via RapidAPI.com)
-	var settings = {
+	// API key code for the IMBD website (via RapidAPI.com) @ title/find end point.
+	var settings1 = {
 		async: true,
 		crossDomain: true,
-		url: "https://imdb8.p.rapidapi.com/title/get-meta-data?region=US",
+		url: "https://imdb8.p.rapidapi.com/title/find?q=" + selections.genres[0],
 		method: "GET",
 		headers: {
 			"x-rapidapi-host": "imdb8.p.rapidapi.com",
 			"x-rapidapi-key": "5e47bf6ae1mshbf95622abb61188p16dfbcjsn7783b76209cb",
 		},
 	};
+	// First ajax call with url source link 1
+	$.ajax(settings1).done(function (response) {
+		for (var i = 0; i < 5; i++) {
+			var movieID = response.results[i].id;
+			var movieIDArray = movieID.split("/");
+			var finalMovieID = movieID[1];
 
-	$.ajax(settings).done(function (response) {
-		// $("recommendations").toggleClass("hideContent");
-		// $("#recommendations").html(
-		// 	response.tt4154756.waysToWatch.optionGroups[0].displayName.watchOptions[0]
-		// 		.primaryText
-		// );
-		/* if (selections are selected) {
-      output matching API data
-    } else {error message}
-    */
+			// API key code for the IMBD website (via RapidAPI.com) @ title/get-meta-data end point.
+			var settings2 = {
+				async: true,
+				crossDomain: true,
+				url:
+					"https://imdb8.p.rapidapi.com/title/get-meta-data?&ids=" +
+					finalMovieID,
+				method: "GET",
+				headers: {
+					"x-rapidapi-host": "imdb8.p.rapidapi.com",
+					"x-rapidapi-key":
+						"5e47bf6ae1mshbf95622abb61188p16dfbcjsn7783b76209cb",
+				},
+			};
+
+			// Second ajax call wtih url source link 2
+			$.ajax(settings2).done(function (response) {});
+		}
 	});
 }
 
