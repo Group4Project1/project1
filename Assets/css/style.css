@@ -14,3 +14,7 @@
 .hideContent {
 	display: none;
 }
+
+.cardWidth {
+	width: 250px;
+}
