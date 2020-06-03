@@ -93,11 +93,8 @@ function nextQuestion() {
 	console.log("selected choices:" + " " + selections[dataKey]);
 	localStorage.setItem("selections", JSON.stringify(selections));
 
-	// If-statement that will only allow users to proceed if they make at least one criteria (and only one for genre) selection per question.
-	if (
-		selections[dataKey].length === 0 ||
-		(currentQuestion === 2 && selections[dataKey].length >= 2)
-	) {
+	// If-statement that will only allow users to proceed to the next question if they select only one item per criteria.This is done to control for ballooing API data pulls.
+	if (selections[dataKey].length === 0 || selections[dataKey].length >= 2) {
 		// console.log("no checkboxes checked");
 		selections[dataKey] = [];
 		var elem = document.getElementById("modal1");
@@ -110,7 +107,7 @@ function nextQuestion() {
 		$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
 		currentQuestion += 1;
 		if (currentQuestion === 4) {
-			makeAjaxcall();
+			// makeAjaxcall();
 		}
 	}
 }
