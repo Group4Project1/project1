@@ -66,7 +66,7 @@ startSelection();
 
 // This function will only show the first question upon page load.
 function startSelection() {
-	for (var i = 0; i < criteriaQuestions.length; i++) {
+	for (var i = 0; i < 5; i++) {
 		$("#criteria" + i).toggleClass("hideContent");
 		// Invoking the nextQuestion function when "next" button is clicked.
 		$("#buttonNext" + i).click(nextQuestion);
@@ -75,13 +75,15 @@ function startSelection() {
 }
 
 // Check to see if app criteria is met?
-function isAppCriteriaMet(watchOptions) {
+function isAppCriteriaMet(optionGroups) {
 	// for loop is interating throughout the watchOption response in the data array pulled from the API
-	for (var i = 0; i < watchOptions.length; i++) {
-		// this if statement will assign a true if the user's app selection is in the API response
-		if (watchOptions[i].primaryText === selections.apps[0]) {
-			console.log("app criteria met");
-			return true;
+	for (var i = 0; i < optionGroups.length; i++) {
+		for (var j = 0; j < optionGroups[i].watchOptions.length; j++) {
+			// this if statement will assign a true if the user's app selection is in the API response
+			if (optionGroups[i].watchOptions[j].primaryText === selections.apps[0]) {
+				console.log("app criteria met");
+				return true;
+			}
 		}
 	}
 	console.log("app criteria is not met");
@@ -102,7 +104,11 @@ function isTypeCriteriaMet(titleType) {
 
 // Check to see if rating criteria is met?
 function isRatingCriteriaMet(certificate) {
-	if (certificate === selections.rating[0]) {
+	if (
+		certificate === selections.rating[0] ||
+		certificate === "Not Rated" ||
+		!certificate
+	) {
 		console.log("rating criteria met");
 		return true;
 	} else {
@@ -161,7 +167,7 @@ function makeAjaxcall() {
 						}
 
 						var appCriteria = isAppCriteriaMet(
-							response[id].waysToWatch.optionGroups[0].watchOptions
+							response[id].waysToWatch.optionGroups
 						);
 						// invoking function to check type output - passing type response through isTypeCriteriaMet() function.
 						var typeCriteria = isTypeCriteriaMet(response[id].title.titleType);
@@ -172,7 +178,7 @@ function makeAjaxcall() {
 							console.log("all selection criteria is met");
 
 							// variable with assigned JQuery data pulled items are below (building blocks for cards)
-							var newCard = $("<div>").addClass("card");
+							var newCard = $("<div>").addClass("card cardWidth");
 							var cardImageDiv = $("<div>").addClass("card-image");
 							var cardContentDiv = $("<div>").addClass("card-content");
 							var cardImage = $("<img>").attr(
@@ -186,7 +192,9 @@ function makeAjaxcall() {
 							cardContentDiv.text(cardContentString);
 							cardImageDiv.appendTo(newCard);
 							cardContentDiv.appendTo(newCard);
-							newCard.appendTo("#criteria4");
+							newCard.appendTo($("#criteria4"));
+
+							console.log("Card HTML: " + newCard.html());
 						}
 					});
 				}.bind(this, finalMovieID),
