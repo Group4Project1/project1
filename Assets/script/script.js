@@ -53,8 +53,8 @@ var selections = {
 // This is a global variable to help keep track of the current question.
 var currentQuestion = 0;
 
-// Empty array variable to store user's criteria selections.
-var selectedChoices = [];
+// // Empty array variable to store user's criteria selections.
+// var selectedChoices = [];
 
 // This is to initialize any Materialize components.
 $(document).ready(function () {
@@ -76,25 +76,25 @@ function startSelection() {
 
 // This is to start toggling through the criteria questions.
 function nextQuestion() {
+	// this is a local variable to store the data key value.
+	var dataKey = "";
 	// Using this portion to push any user selections to the selectedChoices array.
 	$("#criteria" + currentQuestion + " input").each(function () {
 		// console.log("checking checkbox");
 		var isChecked = $(this).is(":checked");
+		// reassigning the dataKey variable to store the data-key array associated with the selection input.
+		dataKey = $(this).attr("data-key");
 		if (isChecked) {
-			selectedChoices.push($(this).val());
-			console.log($(this).attr("data-key"));
-			selections[$(this).attr("data-key")].push($(this).val());
-
-			console.log("selected choices" + selectedChoices);
-
-			localStorage.setItem(
-				"selectionCriteria",
-				JSON.stringify(selectedChoices)
-			);
+			console.log(dataKey);
+			selections[dataKey].push($(this).val());
 		}
 	});
+	// moved console.log and local storage outside anonymous function to call local storage after all checkboxes per question are itterated through.
+	console.log("selected choices:" + " " + selections[dataKey]);
+	localStorage.setItem("selections", JSON.stringify(selections));
+
 	// If-statement that will only allow users to proceed if they make at least one criteria selection per question.
-	if (selectedChoices.length === 0) {
+	if (selections[dataKey].length === 0) {
 		// console.log("no checkboxes checked");
 		var elem = document.getElementById("modal1");
 		var instance = M.Modal.init(elem);
@@ -106,7 +106,7 @@ function nextQuestion() {
 		$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
 		currentQuestion += 1;
 	}
-	makeAjaxcall();
+	// makeAjaxcall();
 }
 
 function makeAjaxcall() {
@@ -123,13 +123,11 @@ function makeAjaxcall() {
 	};
 
 	$.ajax(settings).done(function (response) {
-    
 		// $("recommendations").toggleClass("hideContent");
 		// $("#recommendations").html(
 		// 	response.tt4154756.waysToWatch.optionGroups[0].displayName.watchOptions[0]
 		// 		.primaryText
-    // );
-    
+		// );
 		/* if (selections are selected) {
       output matching API data
     } else {error message}
