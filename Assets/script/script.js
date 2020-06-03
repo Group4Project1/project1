@@ -74,44 +74,6 @@ function startSelection() {
 	$("#criteria0").toggleClass("hideContent");
 }
 
-// This is to start toggling through the criteria questions.
-function nextQuestion() {
-	// this is a local variable to store the data key value.
-	var dataKey = "";
-	// Using this portion to push any user selections to the selectedChoices array.
-	$("#criteria" + currentQuestion + " input").each(function () {
-		// console.log("checking checkbox");
-		var isChecked = $(this).is(":checked");
-		// reassigning the dataKey variable to store the data-key array associated with the selection input.
-		dataKey = $(this).attr("data-key");
-		if (isChecked) {
-			console.log(dataKey);
-			selections[dataKey].push($(this).val());
-		}
-	});
-	// moved console.log and local storage outside anonymous function to call local storage after all checkboxes per question are itterated through.
-	console.log("selected choices:" + " " + selections[dataKey]);
-	localStorage.setItem("selections", JSON.stringify(selections));
-
-	// If-statement that will only allow users to proceed to the next question if they select only one item per criteria.This is done to control for ballooing API data pulls.
-	if (selections[dataKey].length === 0 || selections[dataKey].length >= 2) {
-		// console.log("no checkboxes checked");
-		selections[dataKey] = [];
-		var elem = document.getElementById("modal1");
-		var instance = M.Modal.init(elem);
-		instance.open();
-	} else {
-		// These JQuery selectors use currentQuestion variable to toggle between questions.
-		// console.log("at least one checkbox checked");
-		$("#criteria" + currentQuestion).toggleClass("hideContent");
-		$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
-		currentQuestion += 1;
-		if (currentQuestion === 4) {
-			// makeAjaxcall();
-		}
-	}
-}
-
 function makeAjaxcall() {
 	// API key code for the IMBD website (via RapidAPI.com) @ title/find end point.
 	var settings1 = {
@@ -150,6 +112,44 @@ function makeAjaxcall() {
 			$.ajax(settings2).done(function (response) {});
 		}
 	});
+}
+
+// This is to start toggling through the criteria questions.
+function nextQuestion() {
+	// this is a local variable to store the data key value.
+	var dataKey = "";
+	// Using this portion to push any user selections to the selectedChoices array.
+	$("#criteria" + currentQuestion + " input").each(function () {
+		// console.log("checking checkbox");
+		var isChecked = $(this).is(":checked");
+		// reassigning the dataKey variable to store the data-key array associated with the selection input.
+		dataKey = $(this).attr("data-key");
+		if (isChecked) {
+			console.log(dataKey);
+			selections[dataKey].push($(this).val());
+		}
+	});
+	// moved console.log and local storage outside anonymous function to call local storage after all checkboxes per question are itterated through.
+	console.log("selected choices:" + " " + selections[dataKey]);
+	localStorage.setItem("selections", JSON.stringify(selections));
+
+	// If-statement that will only allow users to proceed to the next question if they select only one item per criteria.This is done to control for ballooing API data pulls.
+	if (selections[dataKey].length === 0 || selections[dataKey].length >= 2) {
+		// console.log("no checkboxes checked");
+		selections[dataKey] = [];
+		var elem = document.getElementById("modal1");
+		var instance = M.Modal.init(elem);
+		instance.open();
+	} else {
+		// These JQuery selectors use currentQuestion variable to toggle between questions.
+		// console.log("at least one checkbox checked");
+		$("#criteria" + currentQuestion).toggleClass("hideContent");
+		$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
+		currentQuestion += 1;
+		if (currentQuestion === 4) {
+			// makeAjaxcall();
+		}
+	}
 }
 
 //local storage attempt
