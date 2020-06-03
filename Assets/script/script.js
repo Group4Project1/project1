@@ -106,6 +106,7 @@ function nextQuestion() {
 		$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
 		currentQuestion += 1;
 	}
+	makeAjaxcall();
 }
 
 function makeAjaxcall() {
@@ -113,8 +114,7 @@ function makeAjaxcall() {
 	var settings = {
 		async: true,
 		crossDomain: true,
-		url:
-			"https://imdb8.p.rapidapi.com/title/get-meta-data?region=US&ids=tt4154756",
+		url: "https://imdb8.p.rapidapi.com/title/get-meta-data?region=US",
 		method: "GET",
 		headers: {
 			"x-rapidapi-host": "imdb8.p.rapidapi.com",
@@ -123,7 +123,17 @@ function makeAjaxcall() {
 	};
 
 	$.ajax(settings).done(function (response) {
-		// console.log(response);
+    
+		// $("recommendations").toggleClass("hideContent");
+		// $("#recommendations").html(
+		// 	response.tt4154756.waysToWatch.optionGroups[0].displayName.watchOptions[0]
+		// 		.primaryText
+    // );
+    
+		/* if (selections are selected) {
+      output matching API data
+    } else {error message}
+    */
 	});
 }
 
