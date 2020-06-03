@@ -91,6 +91,13 @@ function makeAjaxcall() {
 			var movieID = response.results[i].id;
 			var movieIDArray = movieID.split("/");
 			var finalMovieID = movieIDArray[2];
+
+			// Is usede to keep track of the las searched movie ID to trigger alternative recommendations.
+			if (i === 4) {
+				lastMovieID = finalMovieID;
+				console.log("final movie ID set: " + lastMovieID);
+			}
+
 			console.log(finalMovieID);
 
 			// setting a timeout of second per card
@@ -151,6 +158,10 @@ function makeAjaxcall() {
 							newCard.appendTo($("#criteria4"));
 
 							console.log("Card HTML: " + newCard.html());
+						} else if (lastMovieID === id) {
+							// check is the recommendations (#criteria4) is empty = research to see if JQuery has a way to determine if div is empty
+							// if div is empty, then trigger the alternative movie flow
+							// inside this if statment, add the ajax call from the second API and then make the cards similar to first movie recommendations div.
 						}
 					});
 				}.bind(this, finalMovieID),
