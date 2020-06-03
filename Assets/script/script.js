@@ -40,12 +40,21 @@ var criteriaQuestions = [
 	},
 ];
 
+// Global variable to hold selections
+var selections = {
+	apps: [],
+	type: [],
+	genres: [],
+	rating: [],
+};
 // Global array variable to store user selection
-
-var selectionCriteria = [];
+// var selectionCriteria = [];
 
 // This is a global variable to help keep track of the current question.
 var currentQuestion = 0;
+
+// Empty array variable to store user's criteria selections.
+var selectedChoices = [];
 
 // This is to initialize any Materialize components.
 $(document).ready(function () {
@@ -67,14 +76,14 @@ function startSelection() {
 
 // This is to start toggling through the criteria questions.
 function nextQuestion() {
-	// Empty array variable to store user's criteria selections.
-	var selectedChoices = [];
 	// Using this portion to push any user selections to the selectedChoices array.
 	$("#criteria" + currentQuestion + " input").each(function () {
 		// console.log("checking checkbox");
 		var isChecked = $(this).is(":checked");
 		if (isChecked) {
 			selectedChoices.push($(this).val());
+			console.log($(this).attr("data-key"));
+			selections[$(this).attr("data-key")].push($(this).val());
 
 			console.log("selected choices" + selectedChoices);
 
