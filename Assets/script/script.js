@@ -53,8 +53,8 @@ var selections = {
 // This is a global variable to help keep track of the current question.
 var currentQuestion = 0;
 
-// // Empty array variable to store user's criteria selections.
-// var selectedChoices = [];
+// Empty string variable that will be used to store the last movieID value from the 5 allowed API movie searches.
+var lastMovieID = "";
 
 // This is to initialize any Materialize components.
 $(document).ready(function () {
