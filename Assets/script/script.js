@@ -80,9 +80,11 @@ function isAppCriteriaMet(watchOptions) {
 	for (var i = 0; i < watchOptions.length; i++) {
 		// this if statement will assign a true if the user's app selection is in the API response
 		if (watchOptions[i].primaryText === selections.apps[0]) {
+			console.log("app criteria met");
 			return true;
 		}
 	}
+	console.log("app criteria is not met");
 	// outside of the for loop to ensure this part is executed for each watchOption interation.
 	return false;
 }
@@ -90,8 +92,10 @@ function isAppCriteriaMet(watchOptions) {
 // Check to see if type criteria is met?
 function isTypeCriteriaMet(titleType) {
 	if (titleType === selections.type[0]) {
+		console.log("type criteria met");
 		return true;
 	} else {
+		console.log("type criteria is not met");
 		return false;
 	}
 }
@@ -99,8 +103,10 @@ function isTypeCriteriaMet(titleType) {
 // Check to see if rating criteria is met?
 function isRatingCriteriaMet(certificate) {
 	if (certificate === selections.rating[0]) {
+		console.log("rating criteria met");
 		return true;
 	} else {
+		console.log("rating criteria is not met");
 		return false;
 	}
 }
@@ -123,6 +129,7 @@ function makeAjaxcall() {
 			var movieID = response.results[i].id;
 			var movieIDArray = movieID.split("/");
 			var finalMovieID = movieIDArray[1];
+			console.log(finalMovieID);
 
 			// API key code for the IMBD website (via RapidAPI.com) @ title/get-meta-data end point.
 			var settings2 = {
@@ -155,8 +162,24 @@ function makeAjaxcall() {
 				);
 
 				if (appCriteria && typeCriteria && ratingCriteria) {
-					// JQuery data pull items are below
-					
+					console.log("all selection criteria is met");
+
+					// variable with assigned JQuery data pulled items are below (building blocks for cards)
+					var newCard = $("<div>").addClass("card");
+					var cardImageDiv = $("<div>").addClass("card-image");
+					var cardContentDiv = $("<div>").addClass("card-content");
+					var cardImage = $("<img>").attr(
+						"src",
+						response[finalMovieID].title.image.url
+					);
+					var cardContentString = `${response[finalMovieID].title.title} ${response[finalMovieID].title.year} ${response[finalMovieID].ratings.rating} ${selections.apps[0]}`;
+
+					// Actually building the cards here
+					cardImage.appendTo(cardImageDiv);
+					cardContentDiv.text(cardContentString);
+					cardImageDiv.appendTo(newCard);
+					cardContentDiv.appendTo(newCard);
+					newCard.appendTo("#criteria4");
 				}
 			});
 		}
