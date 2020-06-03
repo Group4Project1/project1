@@ -219,7 +219,7 @@ function nextQuestion() {
 		$("#criteria" + (currentQuestion + 1)).toggleClass("hideContent");
 		currentQuestion += 1;
 		if (currentQuestion === 4) {
-			// makeAjaxcall();
+			makeAjaxcall();
 		}
 	}
 }
