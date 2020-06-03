@@ -74,6 +74,37 @@ function startSelection() {
 	$("#criteria0").toggleClass("hideContent");
 }
 
+// Check to see if app criteria is met?
+function isAppCriteriaMet(watchOptions) {
+	// for loop is interating throughout the watchOption response in the data array pulled from the API
+	for (var i = 0; i < watchOptions.length; i++) {
+		// this if statement will assign a true if the user's app selection is in the API response
+		if (watchOptions[i].primaryText === selections.apps[0]) {
+			return true;
+		}
+	}
+	// outside of the for loop to ensure this part is executed for each watchOption interation.
+	return false;
+}
+
+// Check to see if type criteria is met?
+function isTypeCriteriaMet(titleType) {
+	if (titleType === selections.type[0]) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+// Check to see if rating criteria is met?
+function isRatingCriteriaMet(certificate) {
+	if (certificate === selections.rating[0]) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 function makeAjaxcall() {
 	// API key code for the IMBD website (via RapidAPI.com) @ title/find end point.
 	var settings1 = {
@@ -91,7 +122,7 @@ function makeAjaxcall() {
 		for (var i = 0; i < 5; i++) {
 			var movieID = response.results[i].id;
 			var movieIDArray = movieID.split("/");
-			var finalMovieID = movieID[1];
+			var finalMovieID = movieIDArray[1];
 
 			// API key code for the IMBD website (via RapidAPI.com) @ title/get-meta-data end point.
 			var settings2 = {
@@ -109,7 +140,25 @@ function makeAjaxcall() {
 			};
 
 			// Second ajax call wtih url source link 2
-			$.ajax(settings2).done(function (response) {});
+			$.ajax(settings2).done(function (response) {
+				// invoking function to check app output - passing watch options array response through isAppCriteriaMet() function.
+				var appCriteria = isAppCriteriaMet(
+					response[finalMovieID].waysToWatch.optionGroups[0].watchOptions
+				);
+				// invoking function to check type output - passing type response through isTypeCriteriaMet() function.
+				var typeCriteria = isTypeCriteriaMet(
+					response[finalMovieID].title.titleType
+				);
+				//invoking function to check rating output - passing ratingresponse through isRatingCriteriaMet() function.
+				var ratingCriteria = isRatingCriteriaMet(
+					response[finalMovieID].certificate
+				);
+
+				if (appCriteria && typeCriteria && ratingCriteria) {
+					// JQuery data pull items are below
+					
+				}
+			});
 		}
 	});
 }
