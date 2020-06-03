@@ -93,10 +93,10 @@ function nextQuestion() {
 	console.log("selected choices:" + " " + selections[dataKey]);
 	localStorage.setItem("selections", JSON.stringify(selections));
 
-	// If-statement that will only allow users to proceed if they make at least one criteria (not more than 3) selection per question.
+	// If-statement that will only allow users to proceed if they make at least one criteria (and only one for genre) selection per question.
 	if (
 		selections[dataKey].length === 0 ||
-		(currentQuestion === 2 && selections[dataKey].length >= 4)
+		(currentQuestion === 2 && selections[dataKey].length >= 2)
 	) {
 		// console.log("no checkboxes checked");
 		selections[dataKey] = [];
