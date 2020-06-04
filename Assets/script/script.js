@@ -161,7 +161,7 @@ function makeAjaxcall() {
 
 							// the alternative movie listing will start here.
 							// check to see if recommendations (#criteria4 div) is empty after last movies is pulled
-						} else if (lastMovieID === id && $("$criteria4").is(":empty")) {
+						} else if (lastMovieID === id && $("#criteria4").is(":empty")) {
 							// 2nd API resource
 							var settings3 = {
 								async: true,
@@ -171,16 +171,34 @@ function makeAjaxcall() {
 								method: "GET",
 							};
 							// ajax call for the 2nd API - specifically for alternative flow
-							$.ajax(settings3).done(function (response) {});
+							$.ajax(settings3).done(function (response) {
+								// for loop to return 10 movies that from the "now playing" source
+								for (var i = 0; i < 10; i++) {
+									// // enter the Jquery to create card elements
+									// response.results[i].original_title;
+									// response.results[i].poster_path;
+									// response.results[i].vote_average;
+									// response.results[i].release_date;
 
-							// for loop to return 10 movies that from the "now playing" source
-							for (var i = 0; i < 10; i++) {
-								// enter the Jquery to create card elements
-								response.results[i].original_title;
-								response.results[i].poster_path;
-								response.results[i].vote_average;
-								response.results[i].release_date;
-							}
+									// variable with assigned JQuery data pulled items are below (building blocks for cards)
+									var newCard2 = $("<div>").addClass("card cardWidth");
+									var cardImageDiv2 = $("<div>").addClass("card-image");
+									var cardContentDiv2 = $("<div>").addClass("card-content");
+									var cardImage2 = $("<img>").attr(
+										"src",
+										"https://image.tmdb.org/t/p/original" +
+											response.results[i].poster_path
+									);
+									var cardContentString2 = `${response.results[i].original_title} ${response.results[i].release_date} ${response.results[i].vote_average}`;
+
+									// Actually building the cards here
+									cardImage2.appendTo(cardImageDiv2);
+									cardContentDiv2.text(cardContentString2);
+									cardImageDiv2.appendTo(newCard2);
+									cardContentDiv2.appendTo(newCard2);
+									newCard2.appendTo($("#criteria4"));
+								}
+							});
 						}
 					});
 				}.bind(this, finalMovieID),
