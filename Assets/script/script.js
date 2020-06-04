@@ -176,6 +176,10 @@ function makeAjaxcall() {
 							// for loop to return 10 movies that from the "now playing" source
 							for (var i = 0; i < 10; i++) {
 								// enter the Jquery to create card elements
+								response.results[i].original_title;
+								response.results[i].poster_path;
+								response.results[i].vote_average;
+								response.results[i].release_date;
 							}
 						}
 					});
