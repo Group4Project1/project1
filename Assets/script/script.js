@@ -148,11 +148,11 @@ function makeAjaxcall() {
 								"src",
 								response[id].title.image.url
 							);
-							var cardContentString = `${response[id].title.title}<br/>Released: ${response[id].title.year}<br/>Rating: ${response[id].ratings.rating}</br>Available: ${selections.apps[0]}`;
+							var cardContentString = `${response[id].title.title}<br/>Released: ${response[id].title.year}<br/>Rating: ${response[id].ratings.rating}<br/>Available: ${selections.apps[0]}`;
 
 							// Actually building the cards here
 							cardImage.appendTo(cardImageDiv);
-							cardContentDiv.text(cardContentString);
+							cardContentDiv.html(cardContentString);
 							cardImageDiv.appendTo(newCard);
 							cardContentDiv.appendTo(newCard);
 							newCard.appendTo($("#altRecs"));
@@ -162,6 +162,7 @@ function makeAjaxcall() {
 							// the alternative movie listing will start here.
 							// check to see if recommendations (#criteria4 div) is empty after last movies is pulled
 						} else if (lastMovieID === id && $("#altRecs").is(":empty")) {
+							$("#message").toggleClass("hideContent");
 							// 2nd API resource
 							var settings3 = {
 								async: true,
@@ -198,7 +199,7 @@ function makeAjaxcall() {
 						}
 					});
 				}.bind(this, finalMovieID),
-				2000
+				750
 			);
 		}
 	});
