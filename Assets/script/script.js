@@ -74,7 +74,7 @@ function isRatingCriteriaMet(certificate) {
 }
 
 function makeAjaxcall() {
-	// API key code for the IMBD website (via RapidAPI.com) @ title/find end point.
+	// 1st API Resource (A) - API key code for the IMBD website (via RapidAPI.com) @ title/find end point.
 	var settings1 = {
 		async: true,
 		crossDomain: true,
@@ -92,7 +92,7 @@ function makeAjaxcall() {
 			var movieIDArray = movieID.split("/");
 			var finalMovieID = movieIDArray[2];
 
-			// Is usede to keep track of the las searched movie ID to trigger alternative recommendations.
+			// Is used to keep track of the las searched movie ID to trigger alternative recommendations.
 			if (i === 4) {
 				lastMovieID = finalMovieID;
 				console.log("final movie ID set: " + lastMovieID);
@@ -103,7 +103,7 @@ function makeAjaxcall() {
 			// setting a timeout of second per card
 			setTimeout(
 				function (id) {
-					// API key code for the IMBD website (via RapidAPI.com) @ title/get-meta-data end point.
+					// 1st API resource (B) - API key code for the IMBD website (via RapidAPI.com) @ title/get-meta-data end point.
 					var settings2 = {
 						async: true,
 						crossDomain: true,
@@ -158,10 +158,25 @@ function makeAjaxcall() {
 							newCard.appendTo($("#criteria4"));
 
 							console.log("Card HTML: " + newCard.html());
-						} else if (lastMovieID === id) {
-							// check is the recommendations (#criteria4) is empty = research to see if JQuery has a way to determine if div is empty
-							// if div is empty, then trigger the alternative movie flow
-							// inside this if statment, add the ajax call from the second API and then make the cards similar to first movie recommendations div.
+
+							// the alternative movie listing will start here.
+							// check to see if recommendations (#criteria4 div) is empty after last movies is pulled
+						} else if (lastMovieID === id && $("$criteria4").is(":empty")) {
+							// 2nd API resource
+							var settings3 = {
+								async: true,
+								crossDomain: true,
+								url:
+									"https://api.themoviedb.org/3/movie/now_playing?api_key=eadfe5332a8e17800a0e3fe518057248&language=en-US&page=1",
+								method: "GET",
+							};
+							// ajax call for the 2nd API - specifically for alternative flow
+							$.ajax(settings3).done(function (response) {});
+
+							// for loop to return 10 movies that from the "now playing" source
+							for (var i = 0; i < 10; i++) {
+								// enter the Jquery to create card elements
+							}
 						}
 					});
 				}.bind(this, finalMovieID),
