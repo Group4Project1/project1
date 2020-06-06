@@ -17,4 +17,13 @@
 
 .cardWidth {
 	width: 250px;
+	margin: 15px;
+}
+
+/* .cardImage {
+	max-height: 258px;
+} */
+
+.card-align {
+	float: left;
 }
