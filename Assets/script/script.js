@@ -110,13 +110,11 @@ $(document).ready(function () {
 					var newCard2 = $("<div>").addClass("card cardWidth col s8 m5 l3");
 					var cardImageDiv2 = $("<div>").addClass("card-image");
 					var cardContentDiv2 = $("<div>").addClass("card-content");
-					var cardImage2 = $("<img>")
-						.attr(
-							"src",
-							"https://image.tmdb.org/t/p/original" +
-								response.results[i].poster_path
-						)
-						.addClass("cardImage");
+					var cardImage2 = $("<img>").attr(
+						"src",
+						"https://image.tmdb.org/t/p/original" +
+							response.results[i].poster_path
+					);
 					var cardContentString2 = `${response.results[i].original_title}<br/>Released: ${response.results[i].release_date}<br/>Rating: ${response.results[i].vote_average}`;
 
 					// Actually building the cards here
@@ -200,7 +198,7 @@ $(document).ready(function () {
 				// console.log("all selection criteria is met");
 
 				// variable with assigned JQuery data pulled items are below (building blocks for cards)
-				var newCard = $("<div>").addClass("card cardWidth");
+				var newCard = $("<div>").addClass("card cardWidth col s8 m5 l3");
 				var cardImageDiv = $("<div>").addClass("card-image");
 				var cardContentDiv = $("<div>").addClass("card-content");
 				var cardImage = $("<img>").attr("src", response[id].title.image.url);

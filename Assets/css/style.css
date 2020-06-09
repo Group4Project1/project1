@@ -16,10 +16,6 @@
 	margin: 15px;
 }
 
-/* .cardImage {
-	max-height: 258px;
-} */
-
 .card-align {
 	float: left;
 }
@@ -37,5 +33,3 @@ body {
 main {
 	flex: 1 0 auto;
 }
-
-
