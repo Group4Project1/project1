@@ -57,11 +57,32 @@ It was a challenge for our team to find a completely free (i.e. no quota) API th
 
 ## Application
 
-### Screenshot of Draft Homepage
+In this section, sample screenshots are included below to demonstrate the style and output capabilities of this web app. **_Please note that any movies listed in the screenshots below are subject to change based on the availability of the data from the team's utilized API sources._**
+
+### Screenshot of Homepage
 
 This is the screenshot of our web app's homepage via Pixel 2 screen size test shot. As specified in the instructions, the web app was designed to have mobile-first UI; however, the web app can also be successfully viewed from a desktop screen as well.
 
 ![Group 4 Project 1 Homepage](./Assets/Images/homepage.png)
+
+### Screenshot of Output based on User Selected Criteria
+
+In line with the challenges outlined in the "Lessons Learned" section, the team wanted to provide a screenshot that demonstrates the web app does have the capabilities to generate a movie based on user selection criteria. The [IMDb API from RapidAPI.com](https://rapidapi.com/apidojo/api/imdb8) was used to pull data based on the user's criteria. However, only movies with data that identically matched the users selection criteria were successfully pulled from the API. This resulted in a limited amount of movies populating as scene is the screenshot below.
+
+The selection criteria used to populate this movie are listed in the bullets below.
+
+- App - Amazon Prime Video
+- Type - Movie
+- Genre - Romance
+- Rating - PG-13
+
+![Output when User Criteria was Met](./Assets/Images/criteriaOutput.png)
+
+### Screenshot of Output for Alternative Recommendations
+
+In order to demonstrate the intended functionality and layout of our streaming app, the team decided to include an alternative movie recommendation output which would generate a list of 10 movies that are currently showing in theaters. We used a second API from [themoviedb.org ](https://developers.themoviedb.org/3/getting-started/introduction) to generate this alternative movie recommendation for the user if the user's criteria did not populate any movie/TV series listings from the [IMDb API from RapidAPI.com](https://rapidapi.com/apidojo/api/imdb8).
+
+![Output when User Criteria was not Met](./Assets/Images/altOutput.png)
 
 ## Rough Breakdown of Tasks
 
