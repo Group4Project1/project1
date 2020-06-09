@@ -4,7 +4,7 @@
 
 A Better Streaming Experience
 
-### Added-Value Purpose
+### Value Added Proposal
 
 The goal for this project was to develop a responsive web application, with a mobile-first UI, that the would allow users to search through the content of their various movie streaming applications to help them find the right movie or show to watch according to the following selection criteria:
 
@@ -69,6 +69,12 @@ The list below includes all the technical tools we used to develop this web appl
 This is the homepage wireframe we designed at the beginning of our project to determine the layout of our application. Overall, our final homepage layout mirrors the wireframe's design.
 
 ![Group 4 Project 1 Wireframe](./Assets/Images/App_Wireframe.png)
+
+## Functionality via Flow Chart
+
+This flowchart briefly outlines the core functionality of our better streaming web application.
+
+![Application Flow Chart](./Assets/Images/AppFlowchart.png)
 
 ## APIs Used for the Project
 
