@@ -17,6 +17,13 @@ The goal of this project would be to develop a responsive application the would 
 - Movie vs show series
 - Assigned movie rating (G, PG, PG-13, R)
 
+## GitHub Project Repo & GitHub Pages Link
+
+Here are the links to the team's GitHub Project Repo & GitHub pages link for our web app.
+
+- Link to GitHub Project Repo - [https://github.com/Group4project1/project1](https://github.com/Group4project1/project1)
+- LInk to GitHub Pages for Web App - [https://group4project1.github.io/project1/](https://group4project1.github.io/project1/)
+
 ## Group 4 Members
 
 - [Juliet Goldstein](https://github.com/julietg19)
