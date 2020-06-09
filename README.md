@@ -75,8 +75,10 @@ It was a challenge for our team to find a completely free (i.e. no quota) API th
 - The Movie Database API - [https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/3/getting-started/introduction)
 
 ### Lessons Learned
+No project comes without challenges. As a result, the team wanted to take a moment to document the lessons learned we had the opporuntity to gain and experience throughout this project. 
 
-ADD CONTENT HERE
+#### What is feasible in two weeks?
+#### API Struggles
 
 ## Application
 
