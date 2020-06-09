@@ -3,10 +3,6 @@
 	width: 100%;
 }
 
-/* .fixed-nav {
-	position: fixed;
-} */
-
 .bold {
 	font-weight: bold;
 }
@@ -33,13 +29,13 @@
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+	flex: 1 0 auto;
+}
 
 
