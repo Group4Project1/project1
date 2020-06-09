@@ -32,13 +32,11 @@ SO THAT I can quickly find the best movie or show to watch
 
 ```
 
-## Application
+## Acceptance Criteria
 
-### Screenshot of Draft Homepage
+```
 
-This is the screenshot of our initial version of the homepage.
-
-![Group 4 Project 1 Homepage](./Assets/Images/homepage.png)
+```
 
 ### Wireframe
 
@@ -46,7 +44,7 @@ This is the homepage wireframe we designed at the beginning of our project to de
 
 ![Group 4 Project 1 Wireframe](./Assets/Images/App_Wireframe.png)
 
-## APIs to be Used
+## APIs Used for the Project
 
 It was a challenge for our team to find a completely free (i.e. no quota) API that had the movie/app streaming data. Nevertheless, we were able to find and use the two API's listed below to design our web app. Please reference the "Lessons Learned" section below for a better understanding of the API limitations our team faced and how we pivoted to meet out project's MVP requirements.
 
@@ -56,6 +54,14 @@ It was a challenge for our team to find a completely free (i.e. no quota) API th
 - The Movie Database API - [https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/3/getting-started/introduction)
 
 ### Lessons Learned
+
+## Application
+
+### Screenshot of Draft Homepage
+
+This is the screenshot of our web app's homepage via Pixel 2 screen size test shot. As specified in the instructions, the web app was designed to have mobile-first UI; however, the web app can also be successfully viewed from a desktop screen as well.
+
+![Group 4 Project 1 Homepage](./Assets/Images/homepage.png)
 
 ## Rough Breakdown of Tasks
 
