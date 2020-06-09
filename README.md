@@ -70,11 +70,11 @@ This is the homepage wireframe we designed at the beginning of our project to de
 
 ![Group 4 Project 1 Wireframe](./Assets/Images/App_Wireframe.png)
 
-## Functionality via Flow Chart
+## Functionality via Flowchart
 
 This flowchart briefly outlines the core functionality of our better streaming web application.
 
-![Application Flow Chart](./Assets/Images/AppFlowchart.png)
+![Application Flowchart](./Assets/Images/AppFlowchart.png)
 
 ## APIs Used for the Project
 
@@ -82,9 +82,9 @@ It was a challenge for our team to find a completely free (i.e. no quota) API th
 
 ### APIs for Streaming Apps
 
-- IMDb API - [https://rapidapi.com/apidojo/api/imdb8](https://rapidapi.com/apidojo/api/imdb8)
+- **IMDb API** - [https://rapidapi.com/apidojo/api/imdb8](https://rapidapi.com/apidojo/api/imdb8)
   - This API was used to populate movies data based on user selection criteria because (in limited scenarios) this API had the data that showed where movies / TV series were streaming.
-- The Movie Database API - [https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/3/getting-started/introduction)
+- **The Movie Database API** - [https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/3/getting-started/introduction)
   - This API was used to populate the alternative list of movies current showing in theaters for when the application was unable to pull content matches for the users selections.
 
 ### Lessons Learned
