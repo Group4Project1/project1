@@ -107,7 +107,7 @@ $(document).ready(function () {
 				// for loop to return 10 movies that from the "now playing" source
 				for (var i = 0; i < 10; i++) {
 					// variable with assigned JQuery data pulled items are below (building blocks for cards)
-					var newCard2 = $("<div>").addClass("card cardWidth col s3");
+					var newCard2 = $("<div>").addClass("card cardWidth col s8 m5 l3");
 					var cardImageDiv2 = $("<div>").addClass("card-image");
 					var cardContentDiv2 = $("<div>").addClass("card-content");
 					var cardImage2 = $("<img>")
