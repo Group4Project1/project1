@@ -75,10 +75,18 @@ It was a challenge for our team to find a completely free (i.e. no quota) API th
 - The Movie Database API - [https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/3/getting-started/introduction)
 
 ### Lessons Learned
-No project comes without challenges. As a result, the team wanted to take a moment to document the lessons learned we had the opporuntity to gain and experience throughout this project. 
+
+The team wanted to take a moment to document the lessons learned we had the opporuntity to gain and experience throughout this project. We think it is important to share our experiences with others in hopes of giving the next streaming app the ability to be more robust.
 
 #### What is feasible in two weeks?
+
+- **Stick with MVP** - As new developers, understanding what is feasible within a two week timeframe is a challenge. Throughout the process, we had various wodnerful ideas we wantd to develop; however, the realities of a two-week timeline, limited resources, and meeting MVP quickly taught us that it's better to develop a quality MVP product than a flashy (but disfunctional app).
+
 #### API Struggles
+
+- **Free APIs** - Finding two API's that met our data needs was difficult. Even though we were able to find and apply two individual APIs sources as required for this project, we learned that a quality, unlimited movies/TV API required payment and official vetting from associated companies. In order to make our project work within the allocated two-week timeframe, we had to settle with free API's with limited quotas. This resulted in our team having to regularly monitor and rotate API keys into the code.
+
+- **Data Discrepancy** - While developing our application, we learned your application could only be as sucecessful as the data you were pulling. We encountered many sitautions where the free APIs that we used did not always have complete or consistent data items. For example, we regularly found that streaming app info, ratings, and event types were not consistently provided. With missing data, we found that applying a user's selection criteria further restricted the movie / TV series output within the app.
 
 ## Application
 
