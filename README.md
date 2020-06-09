@@ -8,7 +8,7 @@ A Better Streaming Experience
 
 Have you ever found yourself spending too much time searching for just the right movie or show over all your entertainment streaming apps (Netflix, Hulu, HBO, Amazon Prime, etc.)? If your answer is yes, this application that we are proposing will make your movie streaming experience better!!
 
-### Our Added-Value Purpose
+### Added-Value Purpose
 
 The goal of this project would be to develop a responsive application the would allow users to search through the content of their various movie streaming apps to help them find the right movie or show to watch according to the following selection criteria:
 
@@ -48,7 +48,18 @@ THEN I am presented with either:
     * (2) and alternative list of movies showing in theaters if no API data is avaliable
 ```
 
-### Wireframe
+## Tools Used for Development
+
+The list below includes all the technical tools used to develop this web application:
+
+- HTML
+- JavaScript
+- Materialize CSS
+- Post Man
+- Draw.io
+- Visual Studio Code
+
+## Wireframe
 
 This is the homepage wireframe we designed at the beginning of our project to determine the layout of our app. Overall, our final homepage layout mirrors the wireframe's design.
 
@@ -65,7 +76,7 @@ It was a challenge for our team to find a completely free (i.e. no quota) API th
 
 ### Lessons Learned
 
-NEED TO ADD CONTENT HERE
+ADD CONTENT HERE
 
 ## Application
 
