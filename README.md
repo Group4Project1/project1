@@ -43,7 +43,9 @@ THEN I am presented with a question that requires I select my prefered genre
 WHEN I select my preferred genre and click Next
 THEN I am presented with a question that requires I select my prefered movie rating (G, PG, PG-13, R)
 WHEN I selecy my preferred rating and click Recommendations
-THEN I am presented with either (1) a list of recommended movies if my selected criteria matches content stored in the API or (2) and alternative list of movies showing in theaters if no API data is avaliable
+THEN I am presented with either:
+    * (1) a list of recommended movies if my selected criteria matches content stored in the API  -or-
+    * (2) and alternative list of movies showing in theaters if no API data is avaliable
 ```
 
 ### Wireframe
