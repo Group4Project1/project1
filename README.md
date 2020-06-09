@@ -8,13 +8,14 @@ A Better Movie Streaming Experience
 
 Have you ever found yourself spending too much time searching for just the right movie or show over all your entertainment streaming apps (Netflix, Hulu, HBO, Amazon Prime, etc.)? If your answer is yes, this application that we are proposing will make your movie streaming experience better!!
 
+### Our Added-Value Purpose
+
 The goal of this project would be to develop a responsive application the would allow users to search through the content of their various movie streaming apps to help them find the right movie or show to watch according to the following selection criteria:
 
 - Movie streaming app (i.e. Netflix, Hulu, Amazon Prime, etc.)
 - Genre
 - Movie vs show series
 - Assigned movie rating (G, PG, PG-13, R)
-- NICE TO HAVE: Random streaming recommendation (allows app to make random movie recommendation for use)
 
 ## Group 4 Members
 
@@ -41,21 +42,20 @@ This is the screenshot of our initial version of the homepage.
 
 ### Wireframe
 
-This is the draft wireframe for our project app.
+This is the homepage wireframe we designed at the beginning of our project to determine the layout of our app. Overall, our final homepage layout mirrors the wireframe's design.
 
 ![Group 4 Project 1 Wireframe](./Assets/Images/App_Wireframe.png)
 
 ## APIs to be Used
 
-All API links provided below were listed on the RapidAPI.com website provided to the class via Slack. Below is an initial list of the APIs we plan to use in this project. The API sources may be modified throughout the duration of the project, depending on validity of the data accessible via each API source.
+It was a challenge for our team to find a completely free (i.e. no quota) API that had the movie/app streaming data. Nevertheless, we were able to find and use the two API's listed below to design our web app. Please reference the "Lessons Learned" section below for a better understanding of the API limitations our team faced and how we pivoted to meet out project's MVP requirements.
 
 ### APIs for Streaming Apps
 
-- Netflix API - [https://rapidapi.com/rasiqueira/api/netflix-unofficial/details](https://rapidapi.com/rasiqueira/api/netflix-unofficial/details)
-- Hulu API - [https://rapidapi.com/Streamzui/api/hulu1/details](https://rapidapi.com/Streamzui/api/hulu1/details)
-- Amazon Prime Video API - [https://rapidapi.com/Streamzui/api/streamzui-amazon-prime-video-search](https://rapidapi.com/Streamzui/api/streamzui-amazon-prime-video-search)
-- Rotten Tomatoes API - [https://rapidapi.com/blog/directory/rotten-tomatoes/](https://rapidapi.com/blog/directory/rotten-tomatoes/)
-- IMDB API - [https://rapidapi.com/hmerritt/api/imdb-internet-movie-database-unofficial](https://rapidapi.com/hmerritt/api/imdb-internet-movie-database-unofficial)
+- IMDb API - [https://rapidapi.com/apidojo/api/imdb8](https://rapidapi.com/apidojo/api/imdb8)
+- The Movie Database API - [https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/3/getting-started/introduction)
+
+### Lessons Learned
 
 ## Rough Breakdown of Tasks
 
