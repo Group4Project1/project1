@@ -84,8 +84,8 @@ In order to demonstrate the intended functionality and layout of our streaming a
 
 ![Output when User Criteria was not Met](./Assets/Images/altOutput.png)
 
-## Rough Breakdown of Tasks
+## Project Timeline
 
-Here is our tentative project timeline.
+Here is our team's project timeline. The due dates listed in the table below assisted in the team's planning efforts to stay organized throughout the project.
 
 ![Tentative Timeline](./Assets/Images/Timeline.png)
