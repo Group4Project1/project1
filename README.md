@@ -1,4 +1,4 @@
-# ![Slate icon](./Assets/Images/repo_icon.jpg) Group 4 - Project 1
+# Group 4 - Project 1 ![Slate icon](./Assets/Images/repo_icon.jpg)
 
 ## Project Title
 
