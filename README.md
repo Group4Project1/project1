@@ -33,7 +33,7 @@ Here are the links to the team's GitHub Project Repo and GitHub pages link for o
 
 ```
 AS a fan of movie streaming
-I WANT to be able to be able to search through my movie streaming applications
+I WANT to be able to search through my movie streaming applications
 SO THAT I can quickly find the best movie or show to watch
 
 ```
