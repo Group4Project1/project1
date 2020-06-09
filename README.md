@@ -88,4 +88,4 @@ In order to demonstrate the intended functionality and layout of our streaming a
 
 Here is our tentative project timeline.
 
-![Tentative Timeline](./Assets/Images/Tentative_Timeline.png)
+![Tentative Timeline](./Assets/Images/Timeline.png)
