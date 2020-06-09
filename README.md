@@ -2,7 +2,7 @@
 
 ## Project Title
 
-A Better Movie Streaming Experience
+A Better Streaming Experience
 
 ## Project Description
 
