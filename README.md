@@ -37,7 +37,7 @@ SO THAT I can quickly find the best movie or show to watch
 ```
 GIVEN a movie web application
 WHEN I select my preferred streaming application and click Next
-THEN I am presented with a question that requires I select my preferred type of entertainment (movie or TV series)
+THEN I am presented with a question that requires I select either a movie or TV series
 WHEN I select whether I prefer a movie or TV series and click Next
 THEN I am presented with a question that requires I select my prefered genre
 WHEN I select my preferred genre and click Next
