@@ -4,7 +4,7 @@
 
 ## Project Title
 
-A Better Streaming Experience
+A Better Movie Selection Experience
 
 ### Value Added Proposal
 
