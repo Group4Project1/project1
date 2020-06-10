@@ -3,10 +3,6 @@
 	width: 100%;
 }
 
-/* .fixed-nav {
-	position: fixed;
-} */
-
 .bold {
 	font-weight: bold;
 }
@@ -20,10 +16,6 @@
 	margin: 15px;
 }
 
-/* .cardImage {
-	max-height: 258px;
-} */
-
 .card-align {
 	float: left;
 }
@@ -33,13 +25,15 @@
 }
 
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
 
-  main {
-    flex: 1 0 auto;
-  }
+main {
+	flex: 1 0 auto;
+}
 
-
+.fontSize {
+	font-size: x-large;
+}
