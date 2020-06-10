@@ -109,7 +109,7 @@ In this section, sample screenshots are included below to demonstrate the style 
 
 ### Screenshot of Homepage
 
-This is the screenshot of our web application's homepage via Pixel 2 screen size tested in the Google Inspect window. As specified in the instructions, the web application was designed to have mobile-first UI; however, the web app can also be successfully viewed from a desktop screen as well.
+This is the screenshot of our web application's homepage tested in the Google Inspect window. As specified in the instructions, the web application was designed to have mobile-first UI; however, the web app can also be successfully viewed from a desktop screen as well.
 
 ![Group 4 Project 1 Homepage](./Assets/Images/homepage.png)
 
