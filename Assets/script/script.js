@@ -137,7 +137,7 @@ $(document).ready(function () {
 			method: "GET",
 			headers: {
 				"x-rapidapi-host": "imdb8.p.rapidapi.com",
-				"x-rapidapi-key": "dc9c9303b4msh8f162adfebd6815p11a82djsn3cd92c39dcad",
+				"x-rapidapi-key": "c60e1f3ed8msh7045cea964506d9p1d5e17jsnbeb55af4c3ef",
 			},
 		};
 		// First ajax call with url source link 1
@@ -170,7 +170,7 @@ $(document).ready(function () {
 			method: "GET",
 			headers: {
 				"x-rapidapi-host": "imdb8.p.rapidapi.com",
-				"x-rapidapi-key": "dc9c9303b4msh8f162adfebd6815p11a82djsn3cd92c39dcad",
+				"x-rapidapi-key": "c60e1f3ed8msh7045cea964506d9p1d5e17jsnbeb55af4c3ef",
 			},
 		};
 
